@@ -8,20 +8,27 @@ Usage
 -----
 Use npm or download. Then add to your code:
 
-	var cloudfoundry = require('cloudfoundry');
+``` javascript
+var cloudfoundry = require('cloudfoundry');
+
+// is app running in cloud?
+cloudfoundry.cloud
+
+// host you should use
+cloudfoundry.host
+
+// port you should use
+cloudfoundry.port
 	
-	// is app running in cloud?
-	cloudfoundry.cloud
+```
+
+### Your App Information
+
+``` javascript
+cloudfoundry.app
+```
 	
-	// host you should use
-	cloudfoundry.host
-	
-	// port you should use
-	cloudfoundry.port
-	
-	// your app information
-	cloudfoundry.app
-	
+``` javascript
 	{
 	    instance_id: '7bcc459686eda42a8d696b3b398ed6d1',
 	    instance_index: 0,
@@ -40,10 +47,15 @@ Use npm or download. Then add to your code:
 	    },
 	    host: '172.30.49.112'
 	}
-	
-	// services bound to your app
-	cloudfoundry.services
-	
+```
+
+### Services bound to your app
+
+``` javascript
+cloudfoundry.services
+```
+
+``` javascript
 	{
 	    'mongodb-1.8': [{
 	        name: 'test-mongodb',
@@ -87,16 +99,20 @@ Use npm or download. Then add to your code:
 	        version: '5.1'
 	    }]
 	}
-	
-	// quick access to services
-	cloudfoundry.<service>.<name>
-	// for example, quick access to your mongodb
-	cloudfoundry.mongodb['test-mongodb'].credentials.hostname
-	cloudfoundry.mongodb['test-mongodb'].credentials.port
-	cloudfoundry.mongodb['test-mongodb'].credentials.db
-	cloudfoundry.mongodb['test-mongodb'].credentials.username
-	cloudfoundry.mongodb['test-mongodb'].credentials.password
+```
 
+### Quick access to services
+
+``` javascript
+cloudfoundry.<service>.<name>
+
+// for example, quick access to your mongodb
+cloudfoundry.mongodb['test-mongodb'].credentials.hostname
+cloudfoundry.mongodb['test-mongodb'].credentials.port
+cloudfoundry.mongodb['test-mongodb'].credentials.db
+cloudfoundry.mongodb['test-mongodb'].credentials.username
+cloudfoundry.mongodb['test-mongodb'].credentials.password
+```
 
 License
 -------
