@@ -1,3 +1,4 @@
+[![build status](https://secure.travis-ci.org/igo/cloudfoundry.png)](http://travis-ci.org/igo/cloudfoundry)
 CloudFoundry
 ============
 
